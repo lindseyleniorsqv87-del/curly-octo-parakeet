@@ -1,6 +1,5 @@
-const BASE_URL = (Netlify.env.get("SITE_URL") || "").replace(/\/$/, "");
-
-
+// Get the variable from Envirement on netlify
+const BASE_URL = (Netlify.env.get("LINDSEY") || "").replace(/\/$/, "");
 // These headers are hop-by-hop.
 const STRIP_HEADERS = new Set([
   "host",
@@ -20,7 +19,7 @@ const STRIP_HEADERS = new Set([
 
 export default async function handler(request) {
   if (!BASE_URL) {
-    return new Response("Misconfigured: SITE_URL is not set", { status: 500 });
+    return new Response("Misconfigured: LINDSEY is not set", { status: 500 });
   }
 
   try {
