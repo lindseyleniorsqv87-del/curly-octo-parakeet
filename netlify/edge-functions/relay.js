@@ -14,7 +14,7 @@ const STRIP_HEADERS = new Set([
   "forwarded",
   "x-forwarded-host",
   "x-forwarded-proto",
-  "x-forwarded-port",
+  "x-forwarded-port"
 ]);
 
 export default async function handler(request) {
